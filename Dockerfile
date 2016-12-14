@@ -21,7 +21,7 @@ RUN mkdir -p /var/cache/apache2 /var/run/apache2 /var/lock/apache2 /var/log/apac
 	&& cat database.sql | sqlite3 database.sqlite3 \
 	&& a2enmod rewrite
 
-VOLUME ["/db"]
+#VOLUME ["/db"]
 
 VOLUME ["/var/cache/apache2", "/var/run/apache2", "/var/lock/apache2", "/var/log/apache2"]
 
